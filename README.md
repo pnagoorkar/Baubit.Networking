@@ -1,5 +1,10 @@
 # Baubit.Networking
 
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/TpM4QUH8Djox7cjDaNpup5/2zTgJzKbD2m3nXCf5LKvqS/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/TpM4QUH8Djox7cjDaNpup5/2zTgJzKbD2m3nXCf5LKvqS/tree/master)
+[![codecov](https://codecov.io/gh/pnagoorkar/Baubit.Networking/branch/master/graph/badge.svg)](https://codecov.io/gh/pnagoorkar/Baubit.Networking)
+[![NuGet](https://img.shields.io/nuget/v/Baubit.Networking.svg)](https://www.nuget.org/packages/Baubit.Networking)
+
+
 A .NET 9 networking library providing utilities for TCP communication and testing.
 
 ## Features
