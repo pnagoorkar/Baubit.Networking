@@ -1,5 +1,9 @@
-﻿using System.Net;
+﻿using System;
+using System.IO;
+using System.Net;
 using System.Net.Sockets;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Baubit.Networking
 {
@@ -13,12 +17,12 @@ namespace Baubit.Networking
         /// <summary>
         /// Gets the stream representing the client side of the TCP loopback connection.
         /// </summary>
-        public Stream ClientSideStream { get; init; }
+        public Stream ClientSideStream { get; private set; }
 
         /// <summary>
         /// Gets the stream representing the server side of the TCP loopback connection.
         /// </summary>
-        public Stream ServerSideStream { get; init; }
+        public Stream ServerSideStream { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TCPLoopback"/> class with the specified client and server streams.
@@ -44,8 +48,8 @@ namespace Baubit.Networking
             var port = ((IPEndPoint)listener.LocalEndpoint).Port;
 
             var client = new TcpClient();
-            var connectTask = client.ConnectAsync(IPAddress.Loopback, port, cancellationToken);
-            var clientProxy = await listener.AcceptTcpClientAsync(cancellationToken).ConfigureAwait(false);
+            var connectTask = client.ConnectAsync(IPAddress.Loopback, port);
+            var clientProxy = await listener.AcceptTcpClientAsync().ConfigureAwait(false);
             await connectTask.ConfigureAwait(false);
             listener.Stop();
 

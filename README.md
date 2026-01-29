@@ -1,11 +1,16 @@
 # Baubit.Networking
 
+
 [![CircleCI](https://dl.circleci.com/status-badge/img/circleci/TpM4QUH8Djox7cjDaNpup5/2zTgJzKbD2m3nXCf5LKvqS/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/TpM4QUH8Djox7cjDaNpup5/2zTgJzKbD2m3nXCf5LKvqS/tree/master)
-[![codecov](https://codecov.io/gh/pnagoorkar/Baubit.Networking/branch/master/graph/badge.svg)](https://codecov.io/gh/pnagoorkar/Baubit.Networking)
-[![NuGet](https://img.shields.io/nuget/v/Baubit.Networking.svg)](https://www.nuget.org/packages/Baubit.Networking)
+[![codecov](https://codecov.io/gh/pnagoorkar/Baubit.Networking/branch/master/graph/badge.svg)](https://codecov.io/gh/pnagoorkar/Baubit.Networking)<br/>
+[![NuGet](https://img.shields.io/nuget/v/Baubit.Networking.svg)](https://www.nuget.org/packages/Baubit.Networking/)
+[![NuGet](https://img.shields.io/nuget/dt/Baubit.Networking.svg)](https://www.nuget.org/packages/Baubit.Networking) <br/>
+![.NET Standard 2.0](https://img.shields.io/badge/.NET%20Standard-2.0-512BD4?logo=dotnet&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)<br/>
+[![Known Vulnerabilities](https://snyk.io/test/github/pnagoorkar/Baubit.Networking/badge.svg)](https://snyk.io/test/github/pnagoorkar/Baubit.Networking)
 
 
-A .NET 9 networking library providing utilities for TCP communication and testing.
+A networking library providing utilities for TCP communication and testing.
 
 ## Features
 
@@ -106,30 +111,6 @@ using var loopback = await TCPLoopback.CreateNewAsync();
 - **Inter-process Communication**: Mock TCP communication between processes
 - **Protocol Testing**: Test protocol implementations with guaranteed delivery
 - **Network Simulation**: Simulate client-server interactions in controlled environments
-
-## Testing
-
-Run the test suite:
-
-```bash
-dotnet test
-```
-
-Tests include:
-- Connection creation and stream validation
-- Client-to-server communication
-- Server-to-client communication
-- Resource disposal and cleanup
-
-## Requirements
-
-- .NET 9 or later
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit issues and pull requests.
-
-For bug reports and feature requests, visit the [GitHub repository](https://github.com/pnagoorkar/Baubit.Networking).
 
 ---
 ## Copyright
